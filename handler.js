@@ -26,7 +26,7 @@ const delay = ms =>
  * @param {import("@whiskeysockets/baileys").BaileysEventMap<unknown>["messages.upsert"]} groupsUpdate
  */
 const { getAggregateVotesInPollMessage, makeInMemoryStore } = await (
-  await import('baileys-pro')
+  await import('@whiskeysockets/baileys')
 ).default
 const store = makeInMemoryStore({
   logger: Pino().child({
@@ -53,49 +53,87 @@ export async function handler(chatUpdate) {
       let user = global.db.data.users[m.sender]
       if (typeof user !== 'object') global.db.data.users[m.sender] = {}
       if (user) {
-        if (!isNumber(user.exp)) user.exp = 0
-        if (!isNumber(user.credit)) user.credit = 10
-        if (!isNumber(user.bank)) user.bank = 0
-        if (!isNumber(user.chicken)) user.chicken = 0
-        if (!isNumber(user.lastclaim)) user.lastclaim = 0
+      if (!isNumber(user.exp)) user.exp = 0
+      if (!isNumber(user.gold)) user.gold = 0        // main currency
+      if (!isNumber(user.diamond)) user.diamond = 0  // premium currency
+      if (!isNumber(user.bank)) user.bank = 0
+      if (!isNumber(user.chicken)) user.chicken = 0
+      if (!isNumber(user.lastclaim)) user.lastclaim = 0
+      if (!isNumber(user.lastmiming)) user.lastmiming = 0
+      if (!isNumber(user.lastwork)) user.lastwork = 0
+      if (!isNumber(user.weekly)) user.weekly = 0
+
+  // 🔥 Merge old fields into new system
+    if (user.coin !== undefined) {
+    user.gold += user.coin
+    delete user.coin
+  }
+    if (user.credit !== undefined) {
+    user.gold += user.credit
+    delete user.credit
+  }
+    if (user.xp !== undefined) {
+    user.exp += user.xp
+    delete user.xp
+  }
+
+  // 🔥 Aliases so old plugins still work
+    Object.defineProperty(user, 'coin', {
+    get() { return this.gold },
+    set(v) { this.gold = v }
+  })
+    Object.defineProperty(user, 'credit', {
+    get() { return this.gold },
+    set(v) { this.gold = v }
+  })
+    Object.defineProperty(user, 'xp', {
+    get() { return this.exp },
+    set(v) { this.exp = v }
+  })
+
         if (!('registered' in user)) user.registered = false
-        //-- user registered
-        if (!user.registered) {
-          if (!('name' in user)) user.name = m.name
-          if (!isNumber(user.age)) user.age = -1
-          if (!isNumber(user.regTime)) user.regTime = -1
-        }
-        //--user number
-        if (!isNumber(user.afk)) user.afk = -1
-        if (!('afkReason' in user)) user.afkReason = ''
-        if (!('banned' in user)) user.banned = false
-        if (!isNumber(user.warn)) user.warn = 0
-        if (!isNumber(user.level)) user.level = 0
-        if (!('role' in user)) user.role = 'Tadpole'
-        if (!('autolevelup' in user)) user.autolevelup = false
-           /*
-   Do Not Modify this Section ❌  👇👇
+      if (!user.registered) {
+      if (!('name' in user)) user.name = m.name
+      if (!isNumber(user.age)) user.age = -1
+      if (!isNumber(user.regTime)) user.regTime = -1
+    }
+      if (!isNumber(user.afk)) user.afk = -1
+      if (!('afkReason' in user)) user.afkReason = ''
+      if (!('banned' in user)) user.banned = false
+      if (!isNumber(user.warn)) user.warn = 0
+      if (!isNumber(user.level)) user.level = 0
+      if (!('role' in user)) user.role = 'Tadpole'
+      if (!('autolevelup' in user)) user.autolevelup = false
+
+  /*
+   Do Not Modify this Section ❌ 👇👇
    Else Relationship Features Will Not Work 😔
-   */
-   if (!('lover' in user)) user.lover = ''
-   if (!('exlover' in user)) user.exlover = ''
-   if (!('crush' in user)) user.crush = ''
-   if (!isNumber(user.excount)) user.excount = 0
-      } else {
+    */
+      if (!('lover' in user)) user.lover = ''
+      if (!('exlover' in user)) user.exlover = ''
+      if (!('crush' in user)) user.crush = ''
+      if (!isNumber(user.excount)) user.excount = 0
+
+    } else {
         global.db.data.users[m.sender] = {
-        lover: '',
-        exlover: '',
-        crush: '',
-        excount: 0,
-   /*
-   Do Not Modify this Section ❌  ☝️☝️
-   Else Relationship Features Will Not Work 😔
-   */
+          lover: '',
+          exlover: '',
+          crush: '',
+          excount: 0,
+    /*
+      Do Not Modify this Section ❌ ☝️☝️
+      Else Relationship Features Will Not Work 😔
+        */
           exp: 0,
-          credit: 0,
+          gold: 0,
+          diamond: 0,
           bank: 0,
           chicken: 0,
           lastclaim: 0,
+          lastmiming: 0,
+          lastwork: 0,
+          weekly: 0,
+
           registered: false,
           name: m.name,
           age: -1,
@@ -247,7 +285,7 @@ export async function handler(chatUpdate) {
             let data = (await conn.onWhatsApp(jid))[0] || {}
             if (data.exists)
               m.reply(
-                `*🗂️ Plugin:* ${name}\n*👤 Sender:* ${m.sender}\n*💬 Chat:* ${m.chat}\n*💻 Command:* ${m.text}\n\n\${format(e)}`.trim(),
+                `*🗂️ Plugin:* ${name}\n*👤 Sender:* ${m.sender}\n*💬 Chat:* ${m.chat}\n*💻 Command:* ${m.text}\n\n${format(e)}`.trim(),
                 data.jid
               )
           }
@@ -386,7 +424,7 @@ export async function handler(chatUpdate) {
         if (
           !isPrems &&
           plugin.credit &&
-          global.db.data.users[m.sender].credit < plugin.credit * 1
+          global.db.data.users[m.sender].gold < plugin.credit * 1
         ) {
           this.reply(m.chat, `🟥 You don't have enough gold`, m)
           continue // Gold finished
@@ -455,7 +493,7 @@ export async function handler(chatUpdate) {
               console.error(e)
             }
           }
-          if (m.credit) m.reply(`You used *${+m.credit}*`)
+          if (m.credit) m.reply(`You used *${+m.credit} gold*`)
         }
         break
       }
@@ -473,7 +511,7 @@ export async function handler(chatUpdate) {
     if (m) {
       if (m.sender && (user = global.db.data.users[m.sender])) {
         user.exp += m.exp
-        user.credit -= m.credit * 1
+        user.gold -= m.credit * 1
         user.bank -= m.bank
         user.chicken -= m.chicken
       }
@@ -520,7 +558,7 @@ export async function handler(chatUpdate) {
  */
 export async function participantsUpdate({ id, participants, action }) {
   if (opts['self'] || this.isInit) return
-  if (global.db.data == null) await loadDatabase()
+  if (global.db.data == null) await global.loadDatabase()
   const chat = global.db.data.chats[id] || {}
   const emoji = {
     promote: '👤👑',
@@ -841,9 +879,10 @@ export async function presenceUpdate(presenceUpdate) {
     await console.log('AFK')
     const username = nouser[0].split('@')[0]
     const timeAfk = new Date() - user.afk
+    const timeString = Math.floor(timeAfk / 1000) + ' seconds'
     const caption = `\n@${username} has stopped being AFK and is currently typing.\n\nReason: ${
       user.afkReason ? user.afkReason : 'No Reason'
-    }\nFor the past ${timeAfk.toTimeString()}.\n`
+    }\nFor the past ${timeString}.\n`
 
     this.reply(id, caption, null, {
       mentions: this.parseMention(caption),
