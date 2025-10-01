@@ -5,7 +5,7 @@ let handler = async (m, { conn }) => {
   let hasil = Math.floor(Math.random() * 500)
   let user = global.db.data.users[m.sender]
   if (new Date - user.lastmiming < cooldown) throw `⏳ _${mssg.mineCd}_ *${msToTime((user.lastmiming + cooldown) - new Date())}*`
-  user.coin += hasil
+  user.gold += hasil
   m.reply(`
 🎉 ${mssg.mine} *${hasil} 🪙*`)
   user.lastmiming = new Date * 1

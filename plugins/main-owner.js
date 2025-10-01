@@ -4,13 +4,13 @@ let handler = async (m, { conn }) => {
     return; // or handle the error as appropriate
   }
 
-  const ownerNumber = process.env.OWNERS || global.owner[0] ? global.owner[0][0] : '923444844060'; // Fallback
+  const ownerNumber = process.env.OWNERS || global.owner[0] ? global.owner[0][0] : '2347045889973'; // Fallback
   const OwnerName = process.env.OWNER_NAME || 'QASIM ALI';
   let vcard = `BEGIN:VCARD
 VERSION:3.0
 N:;${ownerNumber};;;
 FN:${OwnerName}
-ORG:GlobalTechInfo
+ORG:BobbyX208
 TITLE:${OwnerName}
 item1.TEL;waid=${ownerNumber}:${ownerNumber}
 item1.X-ABLabel:Owner

@@ -5,10 +5,10 @@ services:
     image: quay.io/qasimtech/mega-bot:latest
     container_name: mega-bot
     restart: unless-stopped
-    working_dir: /root/mega-ai
+    working_dir: /root/AUTOBOB
     volumes:
-      - ./watch.sh:/root/mega-ai/watch.sh
-      - .handler.js:/root/mega-ai/handler.js
+      - ./watch.sh:/root/AUTOBOB/watch.sh
+      - .handler.js:/root/AUTOBOB/handler.js
     ports:
       - "5000:5000"
     environment:
@@ -21,10 +21,10 @@ services:
       MODE: ${MODE:-public}
       PREFIX: ${PREFIX:-.}
     command: sh -c "
-      git clone https://github.com/BobbyX208/MEGA-AI /root/mega-ai || true &&
-      rm -rf /root/mega-ai/.git &&
-      chmod +x /root/mega-ai/watch.sh &&
-      cd /root/mega-ai &&
+      git clone https://github.com/BobbyX208/AUTOBOB /root/AUTOBOB || true &&
+      rm -rf /root/AUTOBOB/.git &&
+      chmod +x /root/AUTOBOB/watch.sh &&
+      cd /root/AUTOBOB &&
       npm install || yarn install &&
       ./watch.sh"
       

@@ -10,7 +10,7 @@ let handler = async (m, {conn, usedPrefix}) => {
  💰 *${mssg.purse.toUpperCase()}*
 ┌───⊷
 ▢ *💎${mssg.dmd}:* _${user.diamond.toLocaleString()}_
-▢ *🪙${mssg.money}:* _${user.coin.toLocaleString()}_
+▢ *🪙${mssg.money}:* _${user.gold.toLocaleString()}_
 └──────────────
 `, m, { mentions: [who] })
 }

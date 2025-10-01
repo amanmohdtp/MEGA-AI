@@ -67,7 +67,7 @@ const handler = async (m, { conn, args }) => {
       const fileName = mediaData.title ? `${mediaData.title}.mp4` : 'media.mp4';
       const mimetype = 'video/mp4';
 
-      await conn.sendFile(m.chat, mediaBuffer, fileName, '*Powered by Ultra-MD*', m, false, { mimetype });
+      await conn.sendFile(m.chat, mediaBuffer, fileName, '*Powered by AUTOBOB*', m, false, { mimetype });
       m.react('✅');
     }
     // Handle image download
@@ -80,7 +80,7 @@ const handler = async (m, { conn, args }) => {
       const fileName = mediaData.title ? `${mediaData.title}.jpg` : 'media.jpg';
       const mimetype = 'image/jpeg';
 
-      await conn.sendFile(m.chat, mediaBuffer, fileName, '*Powered by Ultra-MD*', m, false, { mimetype });
+      await conn.sendFile(m.chat, mediaBuffer, fileName, '*Powered by AUTOBOB*', m, false, { mimetype });
       m.react('✅');
     } else {
       throw new Error('Unsupported media type');

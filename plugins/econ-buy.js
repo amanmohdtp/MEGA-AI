@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, command, args }) => {
   if (!args[0]) throw `📌 ${mssg.example}: *${usedPrefix + command}* all\n*${usedPrefix + command}* 8`;
   if (args[0].toLowerCase() !== 'all' && !/^[1-9]\d*$/.test(args[0])) throw `✳️ ${mssg.isNan}`;
 
-  let all =  Math.floor(user.coin / precioDiamante)
+  let all =  Math.floor(user.gold / precioDiamante)
  let count = args[0].replace('all', all)
  count = Math.max(1, count)
   //if (isNaN(count)) throw `✳️ ${mssg.isNan}`;
@@ -15,8 +15,8 @@ let handler = async (m, { conn, usedPrefix, command, args }) => {
   
   let totalCost = precioDiamante * count;
 
-  if (user.coin >= totalCost) {
-    user.coin -= totalCost;
+  if (user.gold >= totalCost) {
+    user.gold -= totalCost;
     user.diamond += count;
 
     m.reply(`

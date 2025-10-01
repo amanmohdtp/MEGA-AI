@@ -21,20 +21,20 @@
         "whatsapp-bot",
         "whatsapp",
         "mega-bot",
-        "mega-ai-md",
+        "AUTOBOB-md",
         "multi-device",
         "MD"
     ],
-    "homepage": "https://github.com/GlobalTechInfo/MEGA-AI",
+    "homepage": "https://github.com/BobbyX208/AUTOBOB",
     "author": {
-        "name": "GlobalTechInfo"
+        "name": "BobbyX208"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/GlobalTechInfo/MEGA-AI.git"
+        "url": "git+https://github.com/BobbyX208/AUTOBOB.git"
     },
     "bugs": {
-        "url": "https://github.com/GlobalTechInfo/MEGA-AI/issues"
+        "url": "https://github.com/BobbyX208/AUTOBOB/issues"
     },
     "license": "Apache-2.0",
     "dependencies": {
@@ -92,7 +92,7 @@
       "role": "Lead Developer"
     },
     {
-      "name": "GlobalTechInfo",
+      "name": "BobbyX208",
       "role": "Maintainer"
     }
   ]

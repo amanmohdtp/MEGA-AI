@@ -44,12 +44,12 @@ let handler = async (m, { text, usedPrefix, command, conn }) => {
       console.log("Error fetching profile picture:", e);
     }
 
-    const sourceUrl = 'https://youtube.com/@GlobalTechInfo'; // Example source URL for the card
-    const OwnerImg = 'https://github.com/GlobalTechInfo.png';
+    const sourceUrl = 'https://youtube.com/@BobbyX208'; // Example source URL for the card
+    const OwnerImg = 'https://github.com/BobbyX208.png';
     const contextInfo = {
       mentionedJid: [m.sender],
       externalAdReply: {
-        title: 'MEGA-AI', // Title of the card
+        title: 'AUTOBOB', // Title of the card
         body: '𝑇𝛩𝑈𝐶𝛨 𝛨𝛯𝑅𝛯',
         thumbnailUrl: OwnerImg, // Fixed URL syntax with quotes
         mediaUrl: pp,  // Corrected to use profile picture URL fetched

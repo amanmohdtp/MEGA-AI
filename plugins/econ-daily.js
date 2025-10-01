@@ -4,7 +4,7 @@ let cooldown = 86400000
 let handler = async (m, {conn}) => {
   let user = global.db.data.users[m.sender]
   if (new Date - user.lastclaim < cooldown) throw `🎁 ${mssg.dailyCd} *${msToTime((user.lastclaim + cooldown) - new Date())}*`
-  user.coin += free
+  user.gold += free
   m.reply(`
 🎁 *${mssg.daily.toUpperCase()}*
 
