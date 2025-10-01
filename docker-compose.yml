@@ -21,7 +21,7 @@ services:
       MODE: ${MODE:-public}
       PREFIX: ${PREFIX:-.}
     command: sh -c "
-      git clone https://github.com/BobbyX208/MEGA-AI /root/AUTOBOB || true &&
+      git clone https://github.com/BobbyX208/MEGA-AI /root/mega-ai || true &&
       rm -rf /root/megai-ai/.git &&
       chmod +x /mega-ai &&
       cd /root/mega-ai &&
