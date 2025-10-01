@@ -63,34 +63,6 @@ export async function handler(chatUpdate) {
       if (!isNumber(user.lastwork)) user.lastwork = 0
       if (!isNumber(user.weekly)) user.weekly = 0
 
-  // 🔥 Merge old fields into new system
-    if (user.coin !== undefined) {
-    user.gold += user.coin
-    delete user.coin
-  }
-    if (user.credit !== undefined) {
-    user.gold += user.credit
-    delete user.credit
-  }
-    if (user.xp !== undefined) {
-    user.exp += user.xp
-    delete user.xp
-  }
-
-  // 🔥 Aliases so old plugins still work
-    Object.defineProperty(user, 'coin', {
-    get() { return this.gold },
-    set(v) { this.gold = v }
-  })
-    Object.defineProperty(user, 'credit', {
-    get() { return this.gold },
-    set(v) { this.gold = v }
-  })
-    Object.defineProperty(user, 'xp', {
-    get() { return this.exp },
-    set(v) { this.exp = v }
-  })
-
         if (!('registered' in user)) user.registered = false
       if (!user.registered) {
       if (!('name' in user)) user.name = m.name
