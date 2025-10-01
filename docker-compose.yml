@@ -8,7 +8,7 @@ services:
     working_dir: /root/mega-ai
     volumes:
       - ./watch.sh:/root/mega-ai/watch.sh
-      - .handler.js:/root/mega-ai/theandler.js
+      - .handler.js:/root/mega-ai/handler.js
     ports:
       - "5000:5000"
     environment:
