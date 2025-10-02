@@ -7,10 +7,10 @@
 <div align="center">
 
 <img src="https://komarev.com/ghpvc/?username=GlobalTechInfo&label=Profile+Views&color=success&style=flat-square" />
-<img src="https://img.shields.io/github/stars/GlobalTechInfo/AUTOBOB?color=blue&style=yellow-square" />
-<img src="https://img.shields.io/github/forks/GlobalTechInfo/AUTOBOB?color=ff00ff&style=flat-square" />
-<img src="https://img.shields.io/github/repo-size/GlobalTechInfo/AUTOBOB?color=success&style=flat-square" />
-<img src="https://img.shields.io/github/last-commit/GlobalTechInfo/AUTOBOB?color=yellow&style=flat-square" />
+<img src="https://img.shields.io/github/stars/GlobalTechInfo/MEGA-AI?color=blue&style=yellow-square" />
+<img src="https://img.shields.io/github/forks/GlobalTechInfo/MEGA-AI?color=ff00ff&style=flat-square" />
+<img src="https://img.shields.io/github/repo-size/GlobalTechInfo/MEGA-AI?color=success&style=flat-square" />
+<img src="https://img.shields.io/github/last-commit/GlobalTechInfo/MEGA-AI?color=yellow&style=flat-square" />
 <a href="https://discord.gg/fZ7MVJM9sq">
   <img title="Join our Discord" src="https://img.shields.io/discord/1391898062494105752?label=Discord&logo=discord&logoColor=white&style=flat-square&color=7289DA" alt="Discord">
 </a>
@@ -29,7 +29,7 @@
 
 - Just Put Your Number In The Value Of BOT_NUMBER, e.g BOT_NUMBER = '923444844XXX' ,In .env file and Deploy The Bot.
 
-- You'll Get A Pairing Code ( AUTOBOB44 ) Directly In The Terminal at The End Of Deployment, Pair And Get Connected.
+- You'll Get A Pairing Code ( MEGAAI44 ) Directly In The Terminal at The End Of Deployment, Pair And Get Connected.
 
 - If You Gets Any Problem During Connecting to WhatsApp Just Change The DB_NAME in env
 
@@ -171,8 +171,8 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
 
 ---
 
-### 🎩 About AUTOBOB
-**AUTOBOB** is a multi-functional WhatsApp bot designed for automatic reactions, status updates, motivational quotes, and music/media downloads. Built with the **Baileys API**, it aims to enhance user interaction with custom and automated responses. Whether you want fun interactions in a group, to download media from links, or to get motivational quotes, this bot does it all!
+### 🎩 About MEGA-AI
+**MEGA-AI** is a multi-functional WhatsApp bot designed for automatic reactions, status updates, motivational quotes, and music/media downloads. Built with the **Baileys API**, it aims to enhance user interaction with custom and automated responses. Whether you want fun interactions in a group, to download media from links, or to get motivational quotes, this bot does it all!
 
 Key features include:
 - **Autoreact**: If You enables, Bot Will Reats With **Beautiful Random Emojis** On All Messages In All Chats.
@@ -357,8 +357,8 @@ exit
 proot-distro login ubuntu
 ```
 ```
-git clone https://github.com/<your gitHub Username>/AUTOBOB
-cd AUTOBOB
+git clone https://github.com/<your gitHub Username>/MEGA-AI
+cd MEGA-AI
 ```
 ```
 npm install
@@ -404,8 +404,8 @@ exit
 proot-distro login fedora
 ```
 ```
-git clone https://github.com/<your gitHub Username>/AUTOBOB
-cd AUTOBOB
+git clone https://github.com/<your gitHub Username>/MEGA-AI
+cd MEGA-AI
 ```
 ```
 npm install
@@ -419,7 +419,7 @@ npm start
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-- **STAR ⭐ THE REPO IF YOU LIKE AUTOBOB .**
+- **STAR ⭐ THE REPO IF YOU LIKE MEGA-AI .**
 
 
 ## Credits
@@ -433,7 +433,7 @@ npm start
 ## Main Developer
 <a href="https://github.com/GlobalTechInfo"><img src="https://github.com/GlobalTechInfo.png" width="250" height="250" alt="GlobalTechInfo"/></a>
   
-`AUTOBOB - By GlobalTechInfo`
+`MEGA-AI - By GlobalTechInfo`
 
 
 <h2 align="center">  NOTICE
