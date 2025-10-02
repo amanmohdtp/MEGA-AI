@@ -128,9 +128,9 @@ services:
     image: quay.io/qasimtech/mega-bot:latest
     container_name: mega-bot
     restart: unless-stopped
-    working_dir: /root/mega-ai
+    working_dir: /root/AUTOBOB
     volumes:
-      - ./watch.sh:/root/mega-ai/watch.sh
+      - ./watch.sh:/root/AUTOBOB/watch.sh
     ports:
       - "5000:5000"
     environment:
@@ -143,10 +143,10 @@ services:
       MODE: ${MODE:-public}
       PREFIX: ${PREFIX:-.}
     command: sh -c "
-      git clone https://github.com/GlobalTechInfo/MEGA-AI /root/mega-ai || true &&
-      rm -rf /root/mega-ai/.git &&
-      chmod +x /root/mega-ai/watch.sh &&
-      cd /root/mega-ai &&
+      git clone https://github.com/BobbyX208/AUTOBOB /root/AUTOBOB || true &&
+      rm -rf /root/AUTOBOB/.git &&
+      chmod +x /root/AUTOBOB/watch.sh &&
+      cd /root/AUTOBOB &&
       npm install || yarn install &&
       ./watch.sh"
 ```
@@ -192,8 +192,8 @@ chmod +x watch.sh
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/GlobalTechInfo/MEGA-AI
-cd MEGA-AI
+git clone https://github.com/BobbyX208/AUTOBOB
+cd AUTOBOB
 ```
 
 ### 2. Create `.env` file
@@ -212,7 +212,7 @@ REMOVEBG_KEY = ''                                   # obtain a key from ( www.re
 PREFIX = '!,.,?'                                    # one or more,remove this if you want multiprefix  ( optional )
 MODE = 'private'                                    # public or private                                ( optional )
 statusview = 'true'                                 # make it false if you don't want auto status view ( optional )
-BOTNAME = 'MEGA-AI'                                 # your bot name                                    ( optional )
+BOTNAME = 'AUTOBOB'                                 # your bot name                                    ( optional )
 antidelete = 'true'                                 # if true bot will forwards deleted message to you ( optional )
 BOT_NUMBER= '9232045xxxx'                           # your whatsapp phone number for pairing code ( required )
 OWNERS = '92320xxxx,92300xxxx'                      # your Whatsapp phone number,your second Whatsapp phone number

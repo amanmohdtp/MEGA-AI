@@ -14,7 +14,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     m.chat,
     `👛 *Wallet | ${username}*
 
-🪙 *Gold* : ${user.credit}
+🪙 *Gold* : ${user.gold}
 `,
     m,
     { mentions: [who] }

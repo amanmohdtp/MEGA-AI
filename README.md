@@ -7,10 +7,10 @@
 <div align="center">
 
 <img src="https://komarev.com/ghpvc/?username=GlobalTechInfo&label=Profile+Views&color=success&style=flat-square" />
-<img src="https://img.shields.io/github/stars/GlobalTechInfo/MEGA-AI?color=blue&style=yellow-square" />
-<img src="https://img.shields.io/github/forks/GlobalTechInfo/MEGA-AI?color=ff00ff&style=flat-square" />
-<img src="https://img.shields.io/github/repo-size/GlobalTechInfo/MEGA-AI?color=success&style=flat-square" />
-<img src="https://img.shields.io/github/last-commit/GlobalTechInfo/MEGA-AI?color=yellow&style=flat-square" />
+<img src="https://img.shields.io/github/stars/GlobalTechInfo/AUTOBOB?color=blue&style=yellow-square" />
+<img src="https://img.shields.io/github/forks/GlobalTechInfo/AUTOBOB?color=ff00ff&style=flat-square" />
+<img src="https://img.shields.io/github/repo-size/GlobalTechInfo/AUTOBOB?color=success&style=flat-square" />
+<img src="https://img.shields.io/github/last-commit/GlobalTechInfo/AUTOBOB?color=yellow&style=flat-square" />
 <a href="https://discord.gg/fZ7MVJM9sq">
   <img title="Join our Discord" src="https://img.shields.io/discord/1391898062494105752?label=Discord&logo=discord&logoColor=white&style=flat-square&color=7289DA" alt="Discord">
 </a>
@@ -29,7 +29,7 @@
 
 - Just Put Your Number In The Value Of BOT_NUMBER, e.g BOT_NUMBER = '923444844XXX' ,In .env file and Deploy The Bot.
 
-- You'll Get A Pairing Code ( MEGA-AI44 ) Directly In The Terminal at The End Of Deployment, Pair And Get Connected.
+- You'll Get A Pairing Code ( AUTOBOB44 ) Directly In The Terminal at The End Of Deployment, Pair And Get Connected.
 
 - If You Gets Any Problem During Connecting to WhatsApp Just Change The DB_NAME in env
 
@@ -52,7 +52,7 @@
 | PREFIX | put any one symbol here except @,# and + , leave it Blank if you want to use multi prefix |
 | MODE | mode public or private |
 | statusview | make it true if you want bot to view status | 
-| OWNERS | owner number e.g 923444844060 | 
+| OWNERS | owner number e.g 2347045889973 | 
 | BOTNAME | Your Bot Name | 
 | BOT_NUMBER | On this you will get pairing code (Must Needed)| 
 
@@ -99,7 +99,7 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
  **Fork & Star the Repository**
    - Start by forking this repository and giving it a ⭐ to support GlobalTechInfo!
      To set up the MEGA AI quickly, first fork this repository:
-[![MEGA AI Github Repo](https://img.shields.io/badge/Github-Fork%20Repo-red?style=for-the-badge&logo=Github)](https://github.com/GlobalTechInfo/MEGA-AI/fork)
+[![MEGA AI Github Repo](https://img.shields.io/badge/Github-Fork%20Repo-red?style=for-the-badge&logo=Github)](https://github.com/GlobalTechInfo/AUTOBOB/fork)
 
 
 ### Step-by-Step Deployment Guide
@@ -108,7 +108,7 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
 1. [Sign Up on Heroku](https://signup.heroku.com/) if you haven’t already.
 2. Click the button below to deploy directly In Heroku:
    <br>
-   <a href='https://heroku.com/deploy?template=https://github.com/GlobTechInfo/MEGA-AI/Bypass' target="_blank">
+   <a href='https://heroku.com/deploy?template=https://github.com/GlobTechInfo/AUTOBOB/Bypass' target="_blank">
       <img alt='Deploy In Heroku' src='https://img.shields.io/badge/-DEPLOY-purple?style=for-the-badge&logo=heroku&logoColor=white'/>
    </a>
 
@@ -140,7 +140,7 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
 1. [Sign Up on Replit](https://repl.it) if you haven’t already.
 2. Click the button below to deploy using Replit:
    <br>
-   <a href='https://repl.it/github/GlobalTechInfo/MEGA-AI' target="_blank">
+   <a href='https://repl.it/github/GlobalTechInfo/AUTOBOB' target="_blank">
       <img alt='Deploy In Replit' src='https://img.shields.io/badge/-DEPLOY-orange?style=for-the-badge&logo=replit&logoColor=white'/>
    </a>
    
@@ -157,12 +157,12 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
 
 ## Support & Community
 
-<p align="center">Need help? Create an <a href="https://github.com/GlobalTechInfo/MEGA-AI/issues">issue</a> or <a href="https://wa.me/923204566005?text=Hello+Global+Tech,+I+Need+Assistance+For+MEGA+AI">Contact Us on WhatsApp</a>.</p>
+<p align="center">Need help? Create an <a href="https://github.com/GlobalTechInfo/AUTOBOB/issues">issue</a> or <a href="https://wa.me/923204566005?text=Hello+Global+Tech,+I+Need+Assistance+For+MEGA+AI">Contact Us on WhatsApp</a>.</p>
 
 ---
 
 ### 📜 Table of Contents
-1. [About MEGA-AI](#-about-mega-ai)
+1. [About AUTOBOB](#-about-AUTOBOB)
 2. [Features](#-features)
 3. [Installation](#-installation)
 4. [Usage](#-usage)
@@ -171,8 +171,8 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
 
 ---
 
-### 🎩 About MEGA-AI
-**MEGA-AI** is a multi-functional WhatsApp bot designed for automatic reactions, status updates, motivational quotes, and music/media downloads. Built with the **Baileys API**, it aims to enhance user interaction with custom and automated responses. Whether you want fun interactions in a group, to download media from links, or to get motivational quotes, this bot does it all!
+### 🎩 About AUTOBOB
+**AUTOBOB** is a multi-functional WhatsApp bot designed for automatic reactions, status updates, motivational quotes, and music/media downloads. Built with the **Baileys API**, it aims to enhance user interaction with custom and automated responses. Whether you want fun interactions in a group, to download media from links, or to get motivational quotes, this bot does it all!
 
 Key features include:
 - **Autoreact**: If You enables, Bot Will Reats With **Beautiful Random Emojis** On All Messages In All Chats.
@@ -189,7 +189,7 @@ To get started with this project, follow the steps below:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/GlobalTechInfo/MEGA-AI && cd MEGA-AI
+   git clone https://github.com/GlobalTechInfo/AUTOBOB && cd AUTOBOB
    
    npm install && npm start
 ---
@@ -235,7 +235,7 @@ To get started with this project, follow the steps below:
 ---
 ### 🛠 Usage
 
-Once the installation is complete and the bot is running, you can use the MEGA-AI in your WhatsApp group or chat. Below are some key features and how to interact with them:
+Once the installation is complete and the bot is running, you can use the AUTOBOB in your WhatsApp group or chat. Below are some key features and how to interact with them:
 
 #### 1. **A Large Toolkit**
    - Your Personal Toolkit For Various Things To Do Easily.
@@ -272,7 +272,7 @@ Media Downloader: Send a media link (e.g., Facebook,Tiktok or Pinterest) and bot
 Motivational Quotes: Enable status reaction mode to have the bot reply with a quote to every status you view.
 Create Polls: Start a "Would You Rather" poll by typing wyr followed by two options.
 ### 🤝 How to Contribute
-We welcome contributions to MEGA-AI. Here's how you can get involved:
+We welcome contributions to AUTOBOB. Here's how you can get involved:
 
 Fork the repository.
 Create a new branch for your feature.
@@ -357,8 +357,8 @@ exit
 proot-distro login ubuntu
 ```
 ```
-git clone https://github.com/<your gitHub Username>/MEGA-AI
-cd MEGA-AI
+git clone https://github.com/<your gitHub Username>/AUTOBOB
+cd AUTOBOB
 ```
 ```
 npm install
@@ -404,8 +404,8 @@ exit
 proot-distro login fedora
 ```
 ```
-git clone https://github.com/<your gitHub Username>/MEGA-AI
-cd MEGA-AI
+git clone https://github.com/<your gitHub Username>/AUTOBOB
+cd AUTOBOB
 ```
 ```
 npm install
@@ -419,7 +419,7 @@ npm start
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-- **STAR ⭐ THE REPO IF YOU LIKE MEGA-AI .**
+- **STAR ⭐ THE REPO IF YOU LIKE AUTOBOB .**
 
 
 ## Credits
@@ -433,7 +433,7 @@ npm start
 ## Main Developer
 <a href="https://github.com/GlobalTechInfo"><img src="https://github.com/GlobalTechInfo.png" width="250" height="250" alt="GlobalTechInfo"/></a>
   
-`MEGA-AI - By GlobalTechInfo`
+`AUTOBOB - By GlobalTechInfo`
 
 
 <h2 align="center">  NOTICE

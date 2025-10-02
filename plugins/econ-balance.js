@@ -1,21 +1,38 @@
+let handler = async (m, { conn }) => {
+    let who = m.quoted 
+        ? m.quoted.sender 
+        : m.mentionedJid && m.mentionedJid[0] 
+            ? m.mentionedJid[0] 
+            : m.fromMe 
+                ? conn.user.jid 
+                : m.sender
 
-let handler = async (m, {conn, usedPrefix}) => {
-	
-    let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+    if (!(who in global.db.data.users)) throw `✳️ User not found in database`
+
     let user = global.db.data.users[who]
-    if (!(who in global.db.data.users)) throw `✳️ ${mssg.userDb}`
-    conn.reply(m.chat, `
- ≡ *${mssg.name}:* @${who.split('@')[0]}
 
- 💰 *${mssg.purse.toUpperCase()}*
+    let gold = user.gold || 0
+    let exp = user.exp || 0
+    let diamond = user.diamond || 0
+    let bank = user.bank || 0
+
+    let text = `
+≡ *Wallet of:* @${who.split('@')[0]}
+
+💰 *WALLET*
 ┌───⊷
-▢ *💎${mssg.dmd}:* _${user.diamond.toLocaleString()}_
-▢ *🪙${mssg.money}:* _${user.coin.toLocaleString()}_
+▢ *💎 Diamonds:* ${diamond.toLocaleString()}
+▢ *🪙 Gold:* ${gold.toLocaleString()}
+▢ *⭐ XP:* ${exp.toLocaleString()}
+▢ *🏦 Bank:* ${bank.toLocaleString()}
 └──────────────
-`, m, { mentions: [who] })
+`.trim()
+
+    await conn.reply(m.chat, text, m, { mentions: [who] })
 }
-handler.help = ['balance']
+
+handler.help = ['balance', 'bal', 'wallet']
 handler.tags = ['econ']
-handler.command = ['bal', 'diamantes', 'diamond', 'balance'] 
+handler.command = ['balance', 'bal', 'wallet']
 
 export default handler

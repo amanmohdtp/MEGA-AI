@@ -17,7 +17,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
     await conn.sendMessage(m.chat, {
       image: { url: fallbackImage },
-      caption: `*🔍 Google Search Results:*\n\n${formatted}\n\n🌐 Powered by MEGA-AI`,
+      caption: `*🔍 Google Search Results:*\n\n${formatted}\n\n🌐 Powered by AUTOBOB`,
     }, { quoted: m });
 
   } catch (err) {

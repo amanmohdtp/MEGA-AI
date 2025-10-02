@@ -8,7 +8,7 @@ import moment from 'moment-timezone'
 import { promises } from 'fs'
 import { join } from 'path'
 const OwnerName = process.env.OWNER_NAME || 'QASIM ALI';
-const BOTNAME = process.env.BOTNAME || 'MEGA-AI';
+const BOTNAME = process.env.BOTNAME || 'AUTOBOB';
 const timeZone = process.env.TIME_ZONE || 'Asia/Karachi';
 const time = moment.tz(timeZone).format('HH');
 let wib = moment.tz(timeZone).format('HH:mm:ss');
@@ -86,7 +86,7 @@ let str = `
 ◈├• *ownermenu*
 ◈├• *setprivacy*
 ◈╰─♪♪─★─☆──♪♪─❍
-© *GlobalTechInfo*
+© *BobbyX208*
 
 > 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
 `

@@ -21,8 +21,8 @@ let handler = async (m, { conn, usedPrefix }) => {
     let greeting = ucapan();
 
     let str = `
-      『 *MEGA-AI* 』  
-      © 2025 *GlobalTechInfo*`;
+      『 *AUTOBOB* 』  
+      © 2025 *BobbyX208*`;
 
     let msg = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
@@ -93,7 +93,7 @@ let handler = async (m, { conn, usedPrefix }) => {
                                 "name": "cta_url",
                                 "buttonParamsJson": JSON.stringify({
                                     "display_text": "SCRIPT 💕",
-                                    "url": "https://github.com/GlobalTechInfo/ULTRA-MD"
+                                    "url": "https://github.com/BobbyX208/AUTOBOB"
                                 })
                             }
                         ],

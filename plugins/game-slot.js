@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let user = global.db.data.users[m.sender]
     if (new Date - user.lastslot < cooldown) throw `⏳ ${mssg.rouletCd} *${msToTime((user.lastslot + cooldown) - new Date())}*`
     if (apuesta < 100) throw `✳️ ${mssg.betMin} *100 🪙*`
-    if (user.coin < apuesta)throw `✳️ ${mssg.coinNan}`
+    if (user.gold < apuesta)throw `✳️ ${mssg.coinNan}`
    if (maxap < apuesta) return m.reply(`🎰 ${mssg.betMax} *${maxap} 🪙*`) 
    	
     let emojis = ["🕊️", "🦀", "🦎"];
@@ -41,13 +41,13 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let end;
     if (a == b && b == c) {
         end = `🎁 ${mssg.win}\n *+${apuesta} 🪙*`
-        user.coin += apuesta
+        user.gold += apuesta
     } else if (a == b || a == c || b == c) {
         end = `🔮 ${mssg.slotC}\n  *+${reg} 🪙*`
-        user.coin += reg
+        user.gold += reg
     } else {
         end = `😔 ${mssg.lost}  *-${apuesta} 🪙*`
-        user.coin -= apuesta
+        user.gold -= apuesta
     }
     user.lastslot = new Date * 1
     return await m.reply(

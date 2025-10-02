@@ -4,7 +4,7 @@
   "keywords": [
     "whatsapp Ai"
   ],
-  "repository": "https://github.com/GlobalTechInfo/MEGA-AI",
+  "repository": "https://github.com/BobbyX208/AUTOBOB",
   "stack": "container",
   "env": {
     "OWNERS": {
@@ -20,7 +20,7 @@
     "BOTNAME": {
       "description": "Give your BOT a name",
       "required": false,
-      "value": "MEGA-AI"
+      "value": "AUTOBOB"
     },
     "MONGODB_URI": {
       "description": "your mongodb database url",

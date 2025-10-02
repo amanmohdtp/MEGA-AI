@@ -5,7 +5,7 @@ let handler = async (m, {conn}) => {
 	
   let user = global.db.data.users[m.sender]
   if (new Date - user.weekly < cooldown) throw `⏱️ ${mssg.weeklyCd}\n *${msToTime((user.weekly + cooldown) - new Date())}*`
-  user.coin += we
+  user.gold += we
   m.reply(`
 🎁 ${mssg.weekly}
 

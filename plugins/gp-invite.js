@@ -1,6 +1,6 @@
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   if (!text)
-    throw `✳️ Enter the number you want to send a group invite to\n\n📌 Example :\n*${usedPrefix + command}*923444844060`
+    throw `✳️ Enter the number you want to send a group invite to\n\n📌 Example :\n*${usedPrefix + command}*2347045889973`
   if (text.includes('+')) throw `Enter number without *+*`
   if (isNaN(text)) throw ' 📌 Enter only numbers without your country code with no spaces'
   let group = m.chat
