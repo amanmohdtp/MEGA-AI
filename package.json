@@ -25,16 +25,16 @@
         "multi-device",
         "MD"
     ],
-    "homepage": "https://github.com/BobbyX208/AUTOBOB",
+    "homepage": "https://github.com/GlobalTechInfo/MEGA-AI",
     "author": {
-        "name": "BobbyX208"
+        "name": "Qasim Ali"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BobbyX208/AUTOBOB.git"
+        "url": "git+https://github.com/GlobalTechInfo/MEGA-AI.git"
     },
     "bugs": {
-        "url": "https://github.com/BobbyX208/AUTOBOB/issues"
+        "url": "https://github.com/GlobalTechInfo/MEGA-AI/issues"
     },
     "license": "Apache-2.0",
     "dependencies": {
