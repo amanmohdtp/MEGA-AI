@@ -17,7 +17,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   };
 
   let messageContent = {
-    text: '*AUTOBOB IS RUNNING*', // Text content in case a message body is needed
+    text: '*MEGA-AI IS RUNNING*', // Text content in case a message body is needed
     contextInfo: {
       mentionedJid: [m.sender],
       externalAdReply: {

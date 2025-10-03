@@ -355,7 +355,7 @@ async function connectionUpdate(update) {
       const dashboardStats = await generateDatabaseStats()
       conn.logger.info(chalk.cyan('\n' + dashboardStats + '\n'))
       
-      const welcomeMessage = `*🤖 AUTOBOB CONNECTED*\n\nHi ${name}, your bot is now online!*\n\n${dashboardStats}\n\nNeed help? Join support group:\nhttps://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07`
+      const welcomeMessage = `*🤖 MEGA-AI CONNECTED*\n\nHi ${name}, your bot is now online!*\n\n${dashboardStats}\n\nNeed help? Join support group:\nhttps://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07`
 
       await conn.sendMessage(jid, { text: welcomeMessage }, { quoted: null })
     } catch (error) {
@@ -695,7 +695,7 @@ async function generateDatabaseStats() {
     }
     return `
 ┌─────────────────────────────┐
-│   🤖 AUTOBOB DASHBOARD 🤖   │
+│   🤖 MEGA-AI DASHBOARD 🤖   │
 ├─────────────────────────────┤
 │                             │
 │ 👥 Users: ${padRight(stats.users, 19)} │
