@@ -10,32 +10,32 @@
     "OWNERS": {
       "description": "Owners Phone Number",
       "required": true,
-      "value": "923204566006"
+      "value": "918304063560"
     },
     "BOT_NUMBER": {
       "description": "Phone Number On Wich You will Gets Pairing Code",
       "required": true,
-      "value": ""
+      "value": "919497883473"
     },
     "BOTNAME": {
       "description": "Give your BOT a name",
       "required": false,
-      "value": "AUTOBOB"
+      "value": "GODZEXMD"
     },
     "MONGODB_URI": {
       "description": "your mongodb database url",
       "required": true,
-      "value": ""
+      "value": "mongodb+srv://amanmohdtp_db_user:sample_mflix@cluster0.x8gvroj.mongodb.net/?retryWrites=true&w=majority"
     },
     "MODE": {
       "description": "mode public or private",
       "required": true,
-      "value": ""
+      "value": "private"
     },
     "PREFIX": {
       "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
       "required": false,
-      "value": ""
+      "value": "."
     },
      "HKEY": {
       "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
@@ -55,7 +55,7 @@
     "antidelete": {
       "description": "bot will forward deleted messages if you make it true",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     "HOBBIES": {
       "description": "owners hobby for intro card",
@@ -85,12 +85,12 @@
     "OWNER_NAME": {
       "description": "your owner Name",
       "required": false,
-      "value": ""
+      "value": "MALDINI EL CAPITANO"
     },
      "REMOVEBG_KEY": {
       "description": "your Remove background api key",
       "required": false,
-      "value": ""
+      "value": "7GF9UbMV9KbgU8cGz1kTKxUJ"
     }
     },
     "buildpacks": [
